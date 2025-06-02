@@ -1,0 +1,236 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Navbar Styles */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 1.5rem;
+}
+
+#navbar ul li {
+    margin-left: 2rem;
+}
+
+#navbar ul li a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#navbar ul li a:hover {
+    color: #0077b6;
+}
+
+/* Welcome Section */
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    text-align: center;
+}
+
+.welcome-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-content p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 2rem;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    color: #0077b6;
+}
+
+/* Projects Section */
+#projects {
+    padding: 6rem 2rem;
+    background-color: #fff;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #0077b6;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-tile {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-tile:hover {
+    transform: translateY(-10px);
+}
+
+.project-tile img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-tile h3 {
+    padding: 1.5rem 1rem 0.5rem;
+    font-size: 1.3rem;
+}
+
+.project-tile p {
+    padding: 0 1rem 1.5rem;
+    color: #555;
+}
+
+.project-tile a {
+    display: block;
+    padding: 1rem;
+    background-color: #0077b6;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.project-tile a:hover {
+    background-color: #005b8c;
+}
+
+/* Contact Section */
+#contact {
+    padding: 6rem 2rem;
+    background-color: #f5f7fa;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 3rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: #0077b6;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.contact-links a:hover {
+    background-color: #005b8c;
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #navbar ul {
+        justify-content: center;
+    }
+
+    .welcome-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .welcome-content p {
+        font-size: 1.2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    #navbar ul li {
+        margin: 0.5rem 0;
+    }
+
+    .welcome-content h1 {
+        font-size: 2rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
